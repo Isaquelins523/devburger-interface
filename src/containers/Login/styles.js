@@ -5,18 +5,27 @@ import BackgroundRight from '../../assets/background-right.svg';
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+  /* height: 100vh;
+  width: 100vw; */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftContainer = styled.div`
   background: url('${BackgroundLeft}');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   height: 100%;
   width: 100%;
-  max-width: 50%;
+  /* max-width: 50%; */
 
   display: flex;
   align-items: center;
@@ -24,6 +33,7 @@ export const LeftContainer = styled.div`
 
   img {
     width: 80%;
+    max-width: 400px;
   }
 `;
 
@@ -35,14 +45,12 @@ export const RightContainer = styled.div`
 
   height: 100%;
   width: 100%;
-  max-width: 50%;
 
   background: url('${BackgroundRight}');
   background-color: #1e1e1e;
 
   p {
     color: #fff;
-    font-size: 18px;
     font-weight: 800;
 
     a {
@@ -53,7 +61,8 @@ export const RightContainer = styled.div`
 
 export const Title = styled.h2`
   font-family: 'Road Rage', serif;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: 2.5rem;
   color: #ffff;
 
   span {
@@ -65,8 +74,8 @@ export const Title = styled.h2`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  gap: 1.25rem;
+  padding: 1.25rem;
   width: 100%;
   max-width: 400px;
 `;
@@ -89,14 +98,6 @@ export const InputContainer = styled.div`
     font-size: 18px;
     font-weight: 600;
     color: #fff;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 80%;
-    color: #cf3057;
-    font-weight: 600;
-    height: 10px;
   }
 `;
 

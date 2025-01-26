@@ -11,6 +11,20 @@ const globalStyles = createGlobalStyle`
         font-style: normal;
     }
 
+
+    body {
+        width: 100vw;
+        max-width: 100vw;
+
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+    #root {
+        width: 100%;
+        height: 100%;
+    }
+
     button, a {
         cursor: pointer;
     }
